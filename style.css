@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+font-family: "Montserrat", sans-serif;
+ font-family: "Fraunces", serif;
+*/
+
+@font-face {
+    font-family: Fraunces;
+    src: url(./Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    background-color: hsl(30, 38%, 92%);
+}
+
+#container {
+    width: 700px;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: hsl(0, 0%, 100%);
+}
+
+#card-image img {
+    width: 100%;
+}
+
+#card-content {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#card-content h5 {
+    color: hsl(228, 12%, 48%);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+#card-content h2 {
+    font-family: 'Fraunces';
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+#card-content p {
+    line-height: 1.6em;
+    color: hsl(228, 12%, 48%);
+}
+
+#price {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+#current-price {
+    font-family: 'Fraunces';
+    font-size: 42px;
+    font-weight: bold;
+    color: hsl(158, 36%, 37%);
+}
+
+#old-price {
+    text-decoration: line-through;
+}
+
+button {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-weight: 700;
+    background-color: hsl(158, 36%, 37%);
+    cursor: pointer;
+    transition: background-color .5s ease;
+}
+
+button:hover {
+    background-color: hsl(157, 54%, 23%);
+}
+
+button img {
+    padding-right: 7px;
+}
+
+@media only screen and (max-width: 628px) {
+    #container {
+        width: 350px;
+        height: max-content;
+        grid-template-columns: 1fr;
+    }
+
+    #card-image img {
+        height: 290px;
+        object-fit: cover;
+    }
+
+    #card-content {
+        padding: 25px 20px;
+    }
+
+    h2 {
+        padding-top: 12px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    h2,
+    p,
+    #price,
+    button {
+        padding-bottom: 15px;
+    }
+}
